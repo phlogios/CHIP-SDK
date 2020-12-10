@@ -72,7 +72,7 @@ for BIN in ${SUNXI_TOOLS[@]};do
 done
 popd
 
-git clone git@github.com:wh0/CHIP-mtd-utils.git
+git clone https://github.com/wh0/CHIP-mtd-utils.git
 pushd chip-mtd-utils
 git checkout by/1.5.2/next-mlc-debian
 make
