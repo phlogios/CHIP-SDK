@@ -72,7 +72,7 @@ for BIN in ${SUNXI_TOOLS[@]};do
 done
 popd
 
-git clone http://github.com/nextthingco/chip-mtd-utils
+git clone ssh://git@gitlab.docice.network:32775/NextThingCo/chip-mtd-utils.git
 pushd chip-mtd-utils
 git checkout by/1.5.2/next-mlc-debian
 make
@@ -85,11 +85,11 @@ if [ -d CHIP-tools ]; then
   git pull
   popd
 fi
-git clone https://github.com/NextThingCo/CHIP-tools.git
+git clone git@github.com:adiman73/CHIP-tools.git
 
 echo -e "\n Installing CHIP-buildroot"
 if [ ! -d CHIP-buildroot ]; then
-  git clone http://github.com/NextThingCo/CHIP-buildroot
+  git clone git@github.com:manashmandal/CHIP-buildroot.git
 else
   pushd CHIP-buildroot
   git pull
