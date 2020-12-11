@@ -80,16 +80,16 @@ sudo make install
 popd
 
 echo -e "\n Installing CHIP-tools"
-if [ -d CHIP-tools ]; then
-  pushd CHIP-tools
+if [ -d chip-tools ]; then
+  pushd chip-tools
   git pull
   popd
 fi
-git clone git@github.com:adiman73/CHIP-tools.git
+git clone https://github.com/alxgcrz/chip-tools.git
 
 echo -e "\n Installing CHIP-buildroot"
 if [ ! -d CHIP-buildroot ]; then
-  git clone git@github.com:manashmandal/CHIP-buildroot.git
+  git clone https://github.com/manashmandal/CHIP-buildroot.git
 else
   pushd CHIP-buildroot
   git pull
